@@ -166,3 +166,123 @@ N! = (N-1)! * N [for N > 1]
 - Delete
 - Traversal (pre/in/post order)
 
+# Graph Core Concepts Part 1
+
+A graph is a mathematical structure used for representing, finding, analyzing, and optimizing connections between elements (nodes)
+
+## Applications
+
+Gps systems use graphs to find the shortest path from one destination to another
+
+Social networks use graphs to represent connections between users
+
+E-commerce websites use graphs to reccommend items to the shopper
+
+In the WWW web pages are considered vertices and the links between pages is considered the edges
+
+## Variations
+
+### Directed (Digraph)
+
+Each node has a direction associated with it
+
+Traversal can only be done in one direction
+
+### Undirected
+
+Nodes no direction associated with it
+
+Traversal can happen in either direction
+
+### Weighted
+
+Edges have a wieght or value
+
+Typically shows the cost of traversing
+
+Value an represent quantities such as cost, distance, and time
+
+### Unweighted
+
+Edges have no weight
+
+Just shows the connections
+
+### Cyclic
+
+Has cycles or closed regions
+
+This is where a node will be the start and end point of a graph
+
+### Acyclic
+
+Has no cycles
+
+No node can be the start and end point
+
+An Acyclic Directed Graph is a Tree
+
+## Terminology
+
+```Vertex```: Every individual data element is called a vertex or a node
+
+```Edge(Arc)```: A connecting link between two nodes or vertices
+
+```Undirected Edge```: It is a bidirectional edge
+
+```Directed Edge```: It is a unidirectional edge
+
+```Weighted Edge```: An edge with value (cost) on it
+
+```Degree```: The total number of edges connected to a vertex in a graph
+
+```Indegree```: The total number of incoming edges connected to a vertex
+
+```Outdegree```: The total number of outgoing edges connected to a vertex
+
+# Graph Core Concepts Part 2
+
+## Representations
+
+### Adjacency Matrix
+
+2D array of size VxV where a V is the number of vertices in a graph
+
+Adjacency matrix for an undirected graph is always symmetric
+
+Also used to represent weighted graphs
+
+if graph[i][j] = w, then there is an edge from vertex i to vertex j with weight w
+
+#### Advantages
+
+Easy to implement and follow
+
+Checking for an edge is efficient and can be done in O(1);
+
+#### Disadvantages
+
+Takes up a ton of memory for large graphs
+
+### Adjacency list
+
+An array of linked lists is used to represent this graph
+
+The size of the array is equal to the number of vertices
+
+An entry in array[i] represents the linked list of vertices adjacent to the ith vertex
+
+The weights of the edges can be stored in the nodes of the linked lists
+
+#### Advantages
+
+Stores graph in more compact form
+
+Easy to add a vertex
+
+#### Disadvanatages
+
+Checking for an edge is not efficient and can be done in O(V);
+
+
+
